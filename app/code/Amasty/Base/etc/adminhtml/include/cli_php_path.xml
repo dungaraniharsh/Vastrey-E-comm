@@ -1,0 +1,16 @@
+<?xml version="1.0" ?>
+<!--
+/**
+ * @author Amasty Team
+ * @copyright Copyright (c) 2021 Amasty (https://www.amasty.com)
+ * @package Amasty_Base
+ */
+-->
+<include xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Config:etc/system_include.xsd">
+    <field id="cli_php_path" translate="label comment" sortOrder="10" type="text" showInDefault="1" showInWebsite="0" showInStore="0">
+        <label>CLI PHP Path</label>
+        <backend_model>Amasty\Base\Model\Config\Backend\CliPhpPath</backend_model>
+        <comment>Set here the necessary CLI PHP path for your Magento that is used by our extension when running the commands directly during the processing of PHP requests in case the CLI PHP path cannot be determined automatically.</comment>
+        <config_path>amasty_base/system_settings/cli_php_path</config_path>
+    </field>
+</include>

@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+    <type name="Magento\Sales\Model\OrderRepository">
+        <plugin name="order_sync_publisher" type="Kreeva\ErpIntegration\Plugin\SyncOrderPlugin"/>
+    </type>
+    <type name="Magento\Framework\View\Element\UiComponent\DataProvider\CollectionFactory">
+        <arguments>
+            <argument name="collections" xsi:type="array">
+                <item name="kreeva_erpintegration_post_listing_data_source" xsi:type="string">ErpManagementGridCollection</item>
+            </argument>
+        </arguments>
+    </type>
+    <virtualType name="ErpManagementGridCollection" type="Kreeva\ErpIntegration\Ui\DataProvider\ErpManagement\Listing\Collection">
+        <arguments>
+            <argument name="mainTable" xsi:type="string">kr_integration_management</argument>
+            <argument name="resourceModel" xsi:type="string">Kreeva\ErpIntegration\Model\ResourceModel\Erpintegration</argument>
+        </arguments>
+    </virtualType>
+    <preference for="Magento\Framework\MessageQueue\Publisher" type="Kreeva\ErpIntegration\MessageQueue\Publisher" />
+    <preference for="Kreeva\ErpIntegration\Api\Order\InvoiceManagementInterface" type="Kreeva\ErpIntegration\Model\Order\InvoiceManagement"/>
+    <preference for="Kreeva\ErpIntegration\Api\Order\ShippingManagementInterface" type="Kreeva\ErpIntegration\Model\Order\ShippingManagement"/>
+    <preference for="Kreeva\ErpIntegration\Api\Order\WebhookManagementInterface" type="Kreeva\ErpIntegration\Model\Order\WebhookManagement"/>
+    <preference for="Kreeva\ErpIntegration\Api\Order\WebhookInterface" type="Kreeva\ErpIntegration\Model\Order\Webhook" />
+</config>

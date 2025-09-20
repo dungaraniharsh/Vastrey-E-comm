@@ -1,0 +1,21 @@
+<?xml version="1.0" ?>
+<routes xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Webapi:etc/webapi.xsd">
+	<route method="POST" url="/V1/kreeva-order/invoice">
+		<service class="Kreeva\ErpIntegration\Api\Order\InvoiceManagementInterface" method="invoice"/>
+		<resources>
+			<resource ref="Kreeva_ErpIntegrtion::Invoice"/>
+		</resources>
+	</route>
+	<route method="POST" url="/V1/kreeva-order/ship">
+		<service class="Kreeva\ErpIntegration\Api\Order\ShippingManagementInterface" method="ship"/>
+		<resources>
+			<resource ref="Kreeva_ErpIntegrtion::Shipping"/>
+		</resources>
+	</route>
+	<route method="POST" url="/V1/kreeva-order/webhook">
+		<service class="Kreeva\ErpIntegration\Api\Order\WebhookManagementInterface" method="webhook"/>
+		<resources>
+			<resource ref="Kreeva_ErpIntegrtion::Webhook"/>
+		</resources>
+	</route>
+</routes>

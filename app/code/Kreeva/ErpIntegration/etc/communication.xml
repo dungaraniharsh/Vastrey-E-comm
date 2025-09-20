@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework-message-queue:etc/queue.xsd">
+    <topic name="kreeva.orders.sync" request="string" />
+    <topic name="kreeva.orders.invoice.sync" request="string" />
+    <topic name="kreeva.orders.ship.sync" request="string" />
+    <topic name="kreeva.orders.webhook.sync" request="string" />
+</config>

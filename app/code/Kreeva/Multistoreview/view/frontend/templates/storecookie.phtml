@@ -1,0 +1,10 @@
+<?php
+/** @var \Kreeva\Multistoreview\Block\StoreCookie $block */
+?>
+<script type="text/x-magento-init">
+    {
+        "body": {
+            "storeCookie": <?= /* @noEscape */ $block->getStoreData() ?>
+        }
+    }
+</script>

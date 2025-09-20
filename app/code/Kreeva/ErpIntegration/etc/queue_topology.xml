@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework-message-queue:etc/topology.xsd">
+    <exchange name="kr.order.sync.create" type="topic" connection="amqp">
+        <binding id="krerporder" topic="kreeva.orders.sync" destinationType="queue" destination="kr_orders"/>
+    </exchange>
+    <exchange name="kr.order.sync.invoice" type="topic" connection="amqp">
+        <binding id="krerporder_invoice" topic="kreeva.orders.invoice.sync" destinationType="queue" destination="kr_orders_invoice"/>
+    </exchange>
+    <exchange name="kr.order.sync.ship" type="topic" connection="amqp">
+        <binding id="krerporder_ship" topic="kreeva.orders.ship.sync" destinationType="queue" destination="kr_orders_ship"/>
+    </exchange>
+    <exchange name="kr.order.sync.webhook" type="topic" connection="amqp">
+        <binding id="krerporder_webhook" topic="kreeva.orders.webhook.sync" destinationType="queue" destination="kr_orders_webhook"/>
+    </exchange>
+</config>

@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Config:etc/system_file.xsd">
+    <system>
+        <section id="freshchat" translate="label" sortOrder="30" showInDefault="1" showInWebsite="1" showInStore="1">
+            <label>Freshchat</label>
+            <tab>kreeva_integration</tab>
+            <resource>Kreeva_Freshchat::config_freshchat</resource>
+            <group id="general" translate="label" sortOrder="100" showInDefault="1" showInWebsite="1" showInStore="1">
+                <label>Configuration</label>
+                <field id="apiurl" translate="label" type="text" sortOrder="1" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Freshchat Api URL</label>
+                </field>
+                <field id="apikey" translate="label" type="obscure" sortOrder="1" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Freshchat Api Key</label>
+                </field>
+            </group>
+        </section>
+    </system>
+</config>

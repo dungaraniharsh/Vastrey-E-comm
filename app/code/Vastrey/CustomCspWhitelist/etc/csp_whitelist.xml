@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+/**
+ * Copyright © Magento, Inc. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+-->
+<csp_whitelist xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+               xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Csp:etc/csp_whitelist.xsd">
+    <policies>
+        <policy id="script-src">
+            <values>
+                <value id="cs_csp_paypal" type="host">www.paypal.com</value>
+                <value id="cs_csp_c_paypal" type="host">c.paypal.com</value>
+                <value id="cs_csp_all_paypal" type="host">*.paypal.com</value>
+                <value id="cs_csp_01" type="host">clientcdn.pushengage.com</value>
+                <value id="cs_csp_02" type="host">googleads.g.doubleclick.net</value>
+                <value id="cs_csp_fa_03" type="host">stats.g.doubleclick.net</value>
+            </values>
+        </policy>
+        <policy id="connect-src">
+            <values>
+				<value id="cs_csp_paypal" type="host">www.paypal.com</value>
+                <value id="cs_csp_01" type="host">clientcdn.pushengage.com</value>
+                <value id="cs_csp_02" type="host">googleads.g.doubleclick.net</value>
+                <value id="cs_csp_c_fa_03" type="host">stats.g.doubleclick.net</value>
+            </values>
+        </policy>
+        <policy id="img-src">
+            <values>
+                <value id="cs_csp_img_nt_self" type="host">www.google.com</value>
+                <value id="cs_csp_img_b_stats_paypal" type="host">www.google.co.in</value>
+            </values>
+        </policy>
+        <policy id="style-src">
+            <values>
+                <value id="cs_csp_st_01" type="host">vastrey.pushengage.com</value>
+            </values>
+        </policy>
+        <policy id="style-src">
+            <values>
+                <value id="cs_csp_st_01" type="host">vastrey.pushengage.com</value>
+            </values>
+        </policy>
+        <policy id="frame-src">
+            <values>
+                <value id="cs_csp_frm_01" type="host">bid.g.doubleclick.net</value>
+            </values>
+        </policy>
+    </policies>
+</csp_whitelist>

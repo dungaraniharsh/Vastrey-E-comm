@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:Acl/etc/acl.xsd">
+    <acl>
+        <resources>
+            <resource id="Magento_Backend::admin">
+                <resource id="Kreeva_ErpIntegrtion::Integration" title="ERP Integration" sortOrder="51">
+                    <resource id="Kreeva_ErpIntegrtion::Invoice" title="Invoice" sortOrder="10"/>
+                    <resource id="Kreeva_ErpIntegrtion::Shipping" title="Shipping" sortOrder="20" />
+                    <resource id="Kreeva_ErpIntegrtion::Webhook" title="Webhook" sortOrder="30" />
+                </resource>
+            </resource>
+        </resources>
+    </acl>
+</config>

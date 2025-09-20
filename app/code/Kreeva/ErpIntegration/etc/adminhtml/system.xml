@@ -1,0 +1,41 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Config:etc/system_file.xsd">
+    <system>
+		<tab id="kreeva_integration" translate="label" sortOrder="10">
+            <label>Integration</label>
+        </tab>
+        <section id="erpintegration" translate="label" sortOrder="40" showInDefault="1" showInWebsite="1" showInStore="1">
+            <label>ERP Integration</label>
+            <tab>kreeva_integration</tab>
+            <resource>Kreeva_ErpIntegration::config_erpintegration</resource>
+            <group id="general" translate="label" sortOrder="100" showInDefault="1" showInWebsite="1" showInStore="1">
+                <label>Configuration</label>
+                <field id="apiurl" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>ERP Api URL</label>
+                </field>
+                <field id="apikey" translate="label" type="obscure" sortOrder="20" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>ERP Api Key</label>
+                </field>
+                <field id="companyid" translate="label" type="text" sortOrder="30" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Company ID</label>
+                </field>
+                <field id="channelid" translate="label" type="text" sortOrder="40" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Channel ID</label>
+                </field>
+                <field id="razorpayid" translate="label" type="text" sortOrder="50" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>RazorPay ID</label>
+                </field>
+                <field id="internaltoken" translate="label" type="text" sortOrder="60" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Internal Token</label>
+                </field>
+                <field id="intlshippingmethod" translate="label" type="text" sortOrder="70" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Row Shipping Method</label>
+                    <comment>Shipping Method for International Orders</comment>
+                </field>
+                <field id="payuid" translate="label" type="text" sortOrder="80" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>PayU ID</label>
+                </field>
+            </group>
+        </section>
+    </system>
+</config>

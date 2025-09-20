@@ -1,0 +1,20 @@
+<?php
+?>
+<script>
+require(["jquery"], function ($) {
+	$(document).ready(function () {
+		var currentUrl = location.protocol + '//' + location.host + location.pathname;
+        $.ajax({
+			url: '<?= $block->getUrl("storesettings/index/checkstore") ?>',
+			type: "POST",
+			data: {"current_url": currentUrl},
+		}).done(function (result) {
+			console.log(result);
+			if (result.redirect ==  1) {
+				window.location.href = result.redirect_url;
+			}
+			return true;
+		});        
+    });
+});
+</script>

@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Backend:etc/menu.xsd">
+    <menu>
+        <add id="Kreeva_ErpIntegration::kreeva_integration" title="Vastrey Integration" module="Kreeva_ErpIntegration" sortOrder="51" resource="Kreeva_ErpIntegration::kreeva"/>
+        <add id="Kreeva_ErpIntegration::erpintegration" title="ERP Integration" module="Kreeva_ErpIntegration" sortOrder="10" action="erpintegration/erpintegration" resource="Kreeva_ErpIntegration::erpintegration" parent="Kreeva_ErpIntegration::kreeva_integration"/>
+    </menu>
+</config>

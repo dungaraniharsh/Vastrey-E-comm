@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework-message-queue:etc/consumer.xsd">
+    <consumer name="krerporderSync" queue="kr_orders" connection="amqp" consumerInstance="Kreeva\ErpIntegration\MessageQueue\Consumer"
+     handler="Kreeva\ErpIntegration\Model\Order\SyncOrder::process" maxMessages="200" maxIdleTime="180" sleep="60" onlySpawnWhenMessageAvailable="0"/>
+    <consumer name="krerporderInvoiceSync" queue="kr_orders_invoice" connection="amqp" consumerInstance="Kreeva\ErpIntegration\MessageQueue\Consumer"
+     handler="Kreeva\ErpIntegration\Model\Order\SyncInvoice::process" maxMessages="200" maxIdleTime="180" sleep="60" onlySpawnWhenMessageAvailable="0"/>
+    <consumer name="krerporderShipSync" queue="kr_orders_ship" connection="amqp" consumerInstance="Kreeva\ErpIntegration\MessageQueue\Consumer"
+      handler="Kreeva\ErpIntegration\Model\Order\SyncShipping::process" maxMessages="200" maxIdleTime="180" sleep="60" onlySpawnWhenMessageAvailable="0"/>
+    <consumer name="krerporderWebhookSync" queue="kr_orders_webhook" connection="amqp" consumerInstance="Kreeva\ErpIntegration\MessageQueue\Consumer"
+      handler="Kreeva\ErpIntegration\Model\Order\SyncWebhook::process" maxMessages="200" maxIdleTime="180" sleep="60" onlySpawnWhenMessageAvailable="0"/>
+</config>
